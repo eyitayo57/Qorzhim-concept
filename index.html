@@ -1,0 +1,1138 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f28c00">
+  <meta name="description" content="Shop phones and everyday tech essentials at Qorzhim Concept. Discover chargers, wireless earbuds, power banks and more. Order conveniently on WhatsApp.">
+  <title>Qorzhim Concept | Digitally Ahead</title>
+
+  <style>
+    :root {
+      --orange: #f28c00;
+      --orange-dark: #c86e00;
+      --ink: #201b16;
+      --muted: #6d655c;
+      --cream: #fffaf2;
+      --white: #ffffff;
+      --line: #eee3d3;
+      --green: #16834a;
+      --shadow: 0 14px 40px rgba(54, 35, 12, .09);
+      --radius: 22px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 90px;
+    }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background: var(--cream);
+      font-family: Inter, Arial, sans-serif;
+      line-height: 1.6;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    button {
+      font: inherit;
+      cursor: pointer;
+    }
+
+    .container {
+      width: min(1160px, calc(100% - 40px));
+      margin-inline: auto;
+    }
+
+    .announcement {
+      background: var(--ink);
+      color: white;
+      text-align: center;
+      padding: 8px 14px;
+      font-size: .84rem;
+    }
+
+    .announcement strong {
+      color: #ffc46f;
+    }
+
+    /* Header and navigation */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(255, 250, 242, .96);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-wrap {
+      min-height: 82px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      min-width: 0;
+    }
+
+    .brand-logo {
+      display: block;
+      width: 76px;
+      height: 66px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+
+    .brand-copy {
+      line-height: 1.12;
+    }
+
+    .brand-name {
+      display: block;
+      font-weight: 900;
+      font-size: 1.03rem;
+      letter-spacing: .055em;
+    }
+
+    .brand-tag {
+      display: block;
+      margin-top: 5px;
+      color: var(--muted);
+      font-size: .77rem;
+      font-style: italic;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 27px;
+    }
+
+    .nav-links a {
+      color: #51483f;
+      font-size: .94rem;
+      font-weight: 650;
+      transition: color .2s;
+    }
+
+    .nav-links a:hover {
+      color: var(--orange-dark);
+    }
+
+    .nav-cta,
+    .button {
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      gap: 9px;
+      border: 0;
+      border-radius: 999px;
+      padding: 12px 19px;
+      background: var(--orange);
+      color: white;
+      font-weight: 800;
+      transition: transform .2s, background .2s;
+    }
+
+    .nav-cta:hover,
+    .button:hover {
+      background: var(--orange-dark);
+      transform: translateY(-2px);
+    }
+
+    .menu-toggle {
+      display: none;
+      border: 1px solid var(--line);
+      background: white;
+      border-radius: 12px;
+      padding: 9px 12px;
+    }
+
+    /* Hero section */
+
+    .hero {
+      padding: 70px 0 58px;
+      overflow: hidden;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.04fr .96fr;
+      gap: 52px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: #fff0d8;
+      color: #8a4c00;
+      padding: 7px 12px;
+      border-radius: 999px;
+      font-size: .82rem;
+      font-weight: 800;
+    }
+
+    .eyebrow-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: var(--orange);
+    }
+
+    h1, h2, h3, p {
+      margin-top: 0;
+    }
+
+    .hero h1 {
+      max-width: 640px;
+      margin: 20px 0 18px;
+      font-size: clamp(2.7rem, 5vw, 4.7rem);
+      line-height: 1.02;
+      letter-spacing: -.055em;
+    }
+
+    .hero h1 span {
+      color: var(--orange-dark);
+    }
+
+    .hero-copy {
+      max-width: 550px;
+      color: var(--muted);
+      font-size: 1.1rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 13px;
+      margin-top: 27px;
+    }
+
+    .button-secondary {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 11px 18px;
+      border: 1px solid #d8c9b5;
+      border-radius: 999px;
+      font-weight: 800;
+      background: white;
+    }
+
+    .button-secondary:hover {
+      border-color: var(--orange);
+    }
+
+    .trust-line {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 17px;
+      margin-top: 28px;
+      color: #5e554b;
+      font-size: .88rem;
+    }
+
+    .check {
+      color: var(--green);
+      font-weight: 900;
+    }
+
+    .hero-visual {
+      position: relative;
+      min-height: 420px;
+      display: grid;
+      place-items: center;
+    }
+
+    .hero-blob {
+      position: absolute;
+      width: min(100%, 450px);
+      aspect-ratio: 1;
+      background: #ffe4b8;
+      border-radius: 46% 54% 57% 43%;
+      transform: rotate(-8deg);
+    }
+
+    .hero-image {
+      position: relative;
+      z-index: 1;
+      width: 100%;
+      max-width: 490px;
+      height: 420px;
+      object-fit: cover;
+      border-radius: 35% 35% 24px 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .float-card {
+      position: absolute;
+      z-index: 2;
+      background: white;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      border-radius: 17px;
+      padding: 13px 16px;
+    }
+
+    .float-card strong,
+    .float-card small {
+      display: block;
+    }
+
+    .float-card small {
+      color: var(--muted);
+    }
+
+    .float-top {
+      top: 26px;
+      left: -4px;
+    }
+
+    .float-bottom {
+      bottom: 20px;
+      right: -8px;
+    }
+
+    /* General sections */
+
+    .section {
+      padding: 68px 0;
+    }
+
+    .section-heading {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 24px;
+      margin-bottom: 28px;
+    }
+
+    .section-kicker {
+      color: var(--orange-dark);
+      text-transform: uppercase;
+      font-size: .77rem;
+      font-weight: 900;
+      letter-spacing: .14em;
+      margin-bottom: 8px;
+    }
+
+    .section-heading h2 {
+      margin-bottom: 0;
+      font-size: clamp(1.9rem, 3vw, 2.7rem);
+      line-height: 1.15;
+      letter-spacing: -.04em;
+    }
+
+    .section-heading p {
+      max-width: 430px;
+      color: var(--muted);
+      margin-bottom: 2px;
+    }
+
+    /* Products */
+
+    .products-section {
+      background: white;
+    }
+
+    .product-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 19px;
+    }
+
+    .product-card {
+      display: flex;
+      flex-direction: column;
+      min-width: 0;
+      border: 1px solid var(--line);
+      background: white;
+      border-radius: var(--radius);
+      overflow: hidden;
+      transition: transform .22s, box-shadow .22s;
+    }
+
+    .product-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow);
+    }
+
+    .product-photo {
+      position: relative;
+      display: grid;
+      place-items: center;
+      min-height: 220px;
+      padding: 17px;
+      background: #fff8ec;
+      overflow: hidden;
+    }
+
+    .product-photo img {
+      width: 100%;
+      height: 190px;
+      object-fit: contain;
+      mix-blend-mode: multiply;
+    }
+
+    .product-badge {
+      position: absolute;
+      top: 13px;
+      left: 13px;
+      z-index: 1;
+      padding: 5px 9px;
+      background: white;
+      color: #81500f;
+      border-radius: 999px;
+      font-size: .7rem;
+      font-weight: 850;
+    }
+
+    .product-info {
+      display: flex;
+      flex-direction: column;
+      flex: 1;
+      padding: 18px;
+    }
+
+    .product-info h3 {
+      margin-bottom: 7px;
+      font-size: 1.05rem;
+    }
+
+    .product-info p {
+      color: var(--muted);
+      font-size: .87rem;
+      margin-bottom: 15px;
+      flex: 1;
+    }
+
+    .price {
+      font-size: 1.16rem;
+      font-weight: 900;
+      margin-bottom: 15px;
+    }
+
+    .price-note {
+      color: var(--muted);
+      font-size: .75rem;
+      font-weight: 500;
+    }
+
+    .buy-button {
+      width: 100%;
+      padding: 11px 13px;
+      border: 1px solid var(--orange);
+      background: var(--orange);
+      color: white;
+      border-radius: 12px;
+      font-weight: 850;
+      cursor: pointer;
+      transition: background .2s, color .2s;
+    }
+
+    .buy-button:hover {
+      background: white;
+      color: var(--orange-dark);
+    }
+
+    /* Benefits */
+
+    .benefits {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .benefit {
+      padding: 24px;
+      background: white;
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+    }
+
+    .benefit-icon {
+      display: grid;
+      place-items: center;
+      width: 46px;
+      height: 46px;
+      border-radius: 14px;
+      background: #fff0d8;
+      font-size: 1.35rem;
+      margin-bottom: 15px;
+    }
+
+    .benefit h3 {
+      margin-bottom: 7px;
+      font-size: 1.08rem;
+    }
+
+    .benefit p {
+      margin-bottom: 0;
+      color: var(--muted);
+      font-size: .92rem;
+    }
+
+    /* About */
+
+    .about-panel {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 42px;
+      align-items: center;
+      background: #251f18;
+      color: white;
+      padding: clamp(27px, 5vw, 54px);
+      border-radius: 30px;
+    }
+
+    .about-art {
+      min-height: 260px;
+      display: grid;
+      place-items: center;
+      border-radius: 23px;
+      background: linear-gradient(145deg, #ffbd57, #f28c00);
+      color: white;
+      font-size: clamp(2.5rem, 5vw, 4rem);
+      font-weight: 950;
+      letter-spacing: -.07em;
+      text-align: center;
+      padding: 20px;
+    }
+
+    .about-panel .section-kicker {
+      color: #ffc46f;
+    }
+
+    .about-panel h2 {
+      font-size: clamp(1.9rem, 3.5vw, 2.8rem);
+      line-height: 1.13;
+      letter-spacing: -.04em;
+      margin-bottom: 16px;
+    }
+
+    .about-panel p {
+      color: #d5c9ba;
+    }
+
+    .about-panel .button {
+      margin-top: 6px;
+    }
+
+    /* Contact */
+
+    .contact-section {
+      padding: 0 0 78px;
+    }
+
+    .contact-box {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+      padding: 34px;
+      border-radius: 25px;
+      background: #fff0d8;
+    }
+
+    .contact-box h2 {
+      margin-bottom: 7px;
+      font-size: clamp(1.6rem, 3vw, 2.3rem);
+      letter-spacing: -.04em;
+    }
+
+    .contact-box p {
+      color: #6c5841;
+      margin-bottom: 0;
+    }
+
+    .contact-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 13px 22px;
+      margin-top: 19px;
+      color: #55483a;
+      font-size: .91rem;
+    }
+
+    .contact-details a {
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* Footer */
+
+    .site-footer {
+      background: var(--ink);
+      color: #eee4d7;
+      padding: 28px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+    }
+
+    .footer-inner p {
+      margin: 0;
+      font-size: .86rem;
+      color: #c8bbab;
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 17px;
+      font-size: .86rem;
+    }
+
+    .footer-links a:hover {
+      color: #ffc46f;
+    }
+
+    .toast {
+      position: fixed;
+      left: 50%;
+      bottom: 22px;
+      z-index: 50;
+      width: max-content;
+      max-width: calc(100% - 30px);
+      padding: 12px 17px;
+      background: var(--ink);
+      color: white;
+      border-radius: 13px;
+      box-shadow: var(--shadow);
+      opacity: 0;
+      transform: translate(-50%, 15px);
+      pointer-events: none;
+      transition: opacity .2s, transform .2s;
+      font-size: .9rem;
+    }
+
+    .toast.show {
+      opacity: 1;
+      transform: translate(-50%, 0);
+    }
+
+    /* Tablet screens */
+
+    @media (max-width: 1050px) {
+      .product-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+
+      .hero-grid {
+        gap: 28px;
+      }
+
+      .nav-links {
+        gap: 15px;
+      }
+
+      .nav-cta {
+        padding: 10px 13px;
+      }
+    }
+
+    /* Mobile screens */
+
+    @media (max-width: 760px) {
+      .nav-wrap {
+        min-height: 72px;
+        gap: 10px;
+      }
+
+      .brand-logo {
+        width: 62px;
+        height: 55px;
+      }
+
+      .brand-name {
+        font-size: .9rem;
+      }
+
+      .nav-cta {
+        display: none;
+      }
+
+      .menu-toggle {
+        display: block;
+      }
+
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 71px;
+        left: 0;
+        right: 0;
+        padding: 16px 22px 22px;
+        background: var(--cream);
+        border-bottom: 1px solid var(--line);
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links a {
+        padding: 12px 0;
+      }
+
+      .hero {
+        padding: 46px 0 38px;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 22px;
+      }
+
+      .hero h1 {
+        font-size: clamp(2.55rem, 11vw, 4rem);
+      }
+
+      .hero-visual {
+        min-height: 320px;
+        margin-inline: 8px;
+      }
+
+      .hero-image {
+        height: 320px;
+        max-width: 420px;
+      }
+
+      .float-top {
+        left: -3px;
+        top: 12px;
+      }
+
+      .float-bottom {
+        right: -3px;
+        bottom: 10px;
+      }
+
+      .section {
+        padding: 52px 0;
+      }
+
+      .section-heading {
+        align-items: start;
+        flex-direction: column;
+        gap: 10px;
+      }
+
+      .benefits {
+        grid-template-columns: 1fr;
+      }
+
+      .about-panel {
+        grid-template-columns: 1fr;
+        gap: 24px;
+      }
+
+      .about-art {
+        min-height: 190px;
+      }
+
+      .contact-box {
+        flex-direction: column;
+        align-items: start;
+        padding: 25px;
+      }
+
+      .footer-inner {
+        align-items: start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .brand-logo {
+        width: 52px;
+        height: 48px;
+      }
+
+      .brand-name {
+        font-size: .82rem;
+      }
+
+      .brand-tag {
+        font-size: .72rem;
+      }
+
+      .product-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+      }
+
+      .product-photo {
+        min-height: 230px;
+      }
+
+      .product-photo img {
+        height: 200px;
+      }
+
+      .trust-line {
+        gap: 10px 15px;
+      }
+
+      .hero-actions {
+        align-items: stretch;
+        flex-direction: column;
+      }
+
+      .hero-actions a {
+        width: 100%;
+      }
+
+      .footer-links {
+        flex-wrap: wrap;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition-duration: .01ms !important;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="announcement">
+    Your everyday tech essentials, all in one place.
+    <strong>Order on WhatsApp.</strong>
+  </div>
+
+  <header class="site-header">
+    <div class="container nav-wrap">
+      <a class="brand" href="#home" aria-label="Qorzhim Concept home">
+        <img class="brand-logo" src="20260528_213437.png" alt="Qorzhim Concept logo">
+        <span class="brand-copy">
+          <span class="brand-name">QORZHIM CONCEPT</span>
+          <span class="brand-tag">Digitally Ahead</span>
+        </span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Open navigation">
+        ☰ Menu
+      </button>
+
+      <nav class="nav-links" id="navLinks" aria-label="Main navigation">
+        <a href="#home">Home</a>
+        <a href="#products">Shop</a>
+        <a href="#why-us">Why us</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <a class="nav-cta" href="https://wa.me/2348137482537?text=Hello%20Qorzhim%20Concept%2C%20I%27d%20like%20to%20make%20an%20enquiry." target="_blank" rel="noopener">
+        Chat with us ↗
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero section -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div>
+          <div class="eyebrow">
+            <span class="eyebrow-dot"></span>
+            Small upgrades. Better everyday.
+          </div>
+
+          <h1>Good gadgets make life <span>a little easier.</span></h1>
+
+          <p class="hero-copy">
+            From the charger you reach for every day to the earbuds that make your commute better, find practical tech essentials at Qorzhim Concept.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button" href="#products">Explore our products →</a>
+            <a class="button-secondary" href="https://wa.me/2348137482537?text=Hello%20Qorzhim%20Concept%2C%20please%20help%20me%20choose%20a%20product." target="_blank" rel="noopener">
+              Need a recommendation?
+            </a>
+          </div>
+
+          <div class="trust-line">
+            <span><b class="check">✓</b> Easy WhatsApp ordering</span>
+            <span><b class="check">✓</b> Helpful responses</span>
+            <span><b class="check">✓</b> Ilorin-based</span>
+          </div>
+        </div>
+
+        <div class="hero-visual" aria-label="A selection of everyday technology accessories">
+          <div class="hero-blob"></div>
+          <img class="hero-image" src="https://images.unsplash.com/photo-1498049794561-7780e7231661?auto=format&fit=crop&w=1000&q=85" alt="A selection of modern electronic gadgets" fetchpriority="high">
+          <div class="float-card float-top">
+            <strong>Tech for everyday</strong>
+            <small>Useful, practical essentials</small>
+          </div>
+          <div class="float-card float-bottom">
+            <strong>Questions? Ask us.</strong>
+            <small>We’re happy to help you choose.</small>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Products section -->
+    <section class="section products-section" id="products">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">The everyday essentials</div>
+            <h2>Find your next favourite.</h2>
+          </div>
+          <p>Have a look around. When something catches your eye, tap “Order on WhatsApp” and tell us what you need.</p>
+        </div>
+
+        <div class="product-grid">
+          <article class="product-card">
+            <div class="product-photo">
+              <span class="product-badge">Smart choice</span>
+              <img src="samsung.jpg" alt="Smartphone" >
+            </div>
+            <div class="product-info">
+              <h3>Samsung</h3>
+              <p>Powerful performance and camera features for work, creativity and everyday moments.</p>
+              <div class="price">₦0.00<span class="price-note">/ listed price</span></div>
+              <button class="buy-button" data-product="iPhone">Order on WhatsApp ↗</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-photo">
+              <span class="product-badge">Everyday essential</span>
+              <img src="Charger.jpg" alt="Phone charger and cable">
+            </div>
+            <div class="product-info">
+              <h3>Charger</h3>
+              <p>A dependable charging companion to help keep your devices ready for the day.</p>
+              <div class="price">₦0.00</div>
+              <button class="buy-button" data-product="Charger">Order on WhatsApp ↗</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-photo">
+              <img src="Earbuds.jpg" alt="earbuds-image">
+            </div>
+            <div class="product-info">
+              <h3>Wireless Earbuds</h3>
+              <p>Enjoy your playlists, calls and favourite podcasts without getting tangled up in wires.</p>
+              <div class="price">₦0.00</div>
+              <button class="buy-button" data-product="Wireless Earbuds">Order on WhatsApp ↗</button>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-photo">
+              <span class="product-badge">Stay powered</span>
+              <img src="Powerbank (1).jpg" alt="Portable power bank" loading="lazy">
+            </div>
+            <div class="product-info">
+              <h3>Power Bank</h3>
+              <p>Extra power for busy days, long trips and the moments when you’re away from a socket.</p>
+              <div class="price">₦0.00</div>
+              <button class="buy-button" data-product="Power Bank">Order on WhatsApp ↗</button>
+            </div>
+          </article>
+        </div>
+
+        <p style="margin:20px 0 0;color:#756b60;font-size:.82rem">
+          Prices shown are the prices provided for this website. Please message us to confirm availability and current pricing before payment.
+        </p>
+      </div>
+    </section>
+
+    <!-- Why choose us -->
+    <section class="section" id="why-us">
+      <div class="container">
+        <div class="section-heading">
+          <div>
+            <div class="section-kicker">A little about the experience</div>
+            <h2>Shopping should feel simple.</h2>
+          </div>
+          <p>You shouldn’t have to guess what to do next. We want it to be easy to ask questions, compare options and place an order.</p>
+        </div>
+
+        <div class="benefits">
+          <article class="benefit">
+            <div class="benefit-icon" aria-hidden="true">💬</div>
+            <h3>Real conversations</h3>
+            <p>Have a question about a product? Message us on WhatsApp before you decide.</p>
+          </article>
+
+          <article class="benefit">
+            <div class="benefit-icon" aria-hidden="true">🔌</div>
+            <h3>Useful everyday tech</h3>
+            <p>Explore essentials for staying connected, charged and entertained throughout your day.</p>
+          </article>
+
+          <article class="benefit">
+            <div class="benefit-icon" aria-hidden="true">🧡</div>
+            <h3>Friendly service</h3>
+            <p>We aim to make your shopping experience clear, helpful and personal from enquiry to order.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- About section -->
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about-panel">
+          <div class="about-art" aria-label="Qorzhim Concept brand lettering">
+            QORZHIM<br>CONCEPT
+          </div>
+
+          <div>
+            <div class="section-kicker">A little about us</div>
+            <h2>Keeping you digitally ahead.</h2>
+            <p>At Qorzhim Concept, we offer phones, chargers, wireless earbuds, power banks and other gadget accessories for everyday life. Whether you’re replacing an essential or looking for something useful, we’re here to help you find what fits your needs.</p>
+            <p>We’re based in Ilorin, and you can contact us directly to ask about products, availability and how to order.</p>
+            <a class="button" href="#contact">Get in touch ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact section -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <div class="contact-box">
+          <div>
+            <div class="section-kicker">Let’s talk tech</div>
+            <h2>Not sure what you need?</h2>
+            <p>Send us a message. Tell us what you’re looking for and we’ll take it from there.</p>
+
+            <div class="contact-details">
+              <span>📍 Ilorin, Nigeria</span>
+              <span>☎ <a href="tel:+2348137482537">0813 748 2537</a></span>
+              <span>✉ <a href="mailto:qorzhimconcept@gmail.com">qorzhimconcept@gmail.com</a></span>
+            </div>
+          </div>
+
+          <a class="button" href="https://wa.me/2348137482537?text=Hello%20Qorzhim%20Concept%2C%20I%20have%20a%20question%20about%20your%20products." target="_blank" rel="noopener">
+            Message us on WhatsApp ↗
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <a class="brand" href="#home">
+        <img class="brand-logo" src="qorzhim-logo.png" alt="Qorzhim Concept logo">
+        <span class="brand-copy">
+          <span class="brand-name">QORZHIM CONCEPT</span>
+          <span class="brand-tag" style="color:#c8bbab">Digitally Ahead</span>
+        </span>
+      </a>
+
+      <p>© <span id="year">2026</span> Qorzhim Concept. All rights reserved.</p>
+
+      <div class="footer-links">
+        <a href="#products">Shop</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">Opening WhatsApp…</div>
+
+  <script>
+    // Update this number if your business WhatsApp number changes.
+    const WHATSAPP_NUMBER = "2348137482537";
+
+    const menuToggle = document.getElementById("menuToggle");
+    const navLinks = document.getElementById("navLinks");
+    const toast = document.getElementById("toast");
+    let toastTimer;
+
+    // Automatically update the copyright year.
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Open and close the mobile navigation menu.
+    menuToggle.addEventListener("click", () => {
+      const isOpen = navLinks.classList.toggle("open");
+
+      menuToggle.setAttribute("aria-expanded", String(isOpen));
+      menuToggle.setAttribute(
+        "aria-label",
+        isOpen ? "Close navigation" : "Open navigation"
+      );
+
+      menuToggle.textContent = isOpen ? "✕ Close" : "☰ Menu";
+    });
+
+    // Close the mobile menu after clicking a navigation link.
+    navLinks.querySelectorAll("a").forEach(link => {
+      link.addEventListener("click", () => {
+        navLinks.classList.remove("open");
+        menuToggle.setAttribute("aria-expanded", "false");
+        menuToggle.setAttribute("aria-label", "Open navigation");
+        menuToggle.textContent = "☰ Menu";
+      });
+    });
+
+    // Create a WhatsApp message for the selected product.
+    document.querySelectorAll(".buy-button").forEach(button => {
+      button.addEventListener("click", () => {
+        const product = button.dataset.product;
+
+        const message =
+          `Hello Qorzhim Concept, I'm interested in ordering the ${product}. Please confirm availability and the current price. Thank you.`;
+
+        const url =
+          `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+
+        toast.classList.add("show");
+        toast.textContent = `Opening WhatsApp to enquire about ${product}…`;
+
+        clearTimeout(toastTimer);
+
+        toastTimer = setTimeout(() => {
+          toast.classList.remove("show");
+        }, 2200);
+
+        window.open(url, "_blank", "noopener,noreferrer");
+      });
+    });
+  </script>
+</body>
+</html>
